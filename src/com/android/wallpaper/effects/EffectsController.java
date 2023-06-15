@@ -15,7 +15,6 @@
  */
 package com.android.wallpaper.effects;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -82,14 +81,6 @@ public abstract class EffectsController {
     }
 
     /**
-     * Triggers the effect.
-     *
-     * @param context the context
-     */
-    public void triggerEffect(Context context) {
-    }
-
-    /**
      * Interface to listen to different key moments of the connection with the Effects Service.
      */
     public interface EffectsServiceListener {
@@ -105,14 +96,4 @@ public abstract class EffectsController {
         void onEffectFinished(EffectEnumInterface effect, Bundle bundle, int error,
                 int originalStatusCode, String errorMessage);
     }
-
-    /**
-     * Gets whether the effect triggering is successful or not.
-     *
-     * @return whether the effect triggering is successful or not.
-     */
-    public boolean isEffectTriggered() {
-        return false;
-    }
-
 }
